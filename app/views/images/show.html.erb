@@ -1,0 +1,16 @@
+<div class="container">
+   <div class="uplaod-block-main" style="background: white;">
+      <div class="row">
+         <div class="col-sm-6">
+            <h2> Claim Title: <%= @claim.title%>  </h2>
+            <% @claim.images.each do |f| %>
+            <div class="uplaod-block-main">
+               <h4> Image Detail: <%= f.detail %>  </h4>
+               <br />
+               <%= image_tag ( f.file_url )  , width: 150 , height: 150 , id: "img_tag" , onclick: "set_img_tag_id(this)" %>
+            </div>
+            <% end %>
+         </div>
+      </div>
+   </div>
+</div>
