@@ -11042,20 +11042,6 @@ return jQuery;
 
 
 
-$( document ).ready(function() {
-       uid = get_uid();
-       $('#img_tag').attr('id',$('#img_tag').attr('id')+uid);
-     // console.log( "ready!" );
-      
-  });
-
-   $(document).on('nested:fieldAdded', function(event){
- // this field was just inserted into your form
- var field = event.field; 
- // it's a jQuery object already! Now you can find date input
- var text_field = field.find('.text');
- // and activate datepicker on it
-});
 (function($) {
   window.NestedFormEvents = function() {
     this.addFields = $.proxy(this.addFields, this);
