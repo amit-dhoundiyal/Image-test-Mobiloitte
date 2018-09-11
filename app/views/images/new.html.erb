@@ -1,5 +1,6 @@
 <center>
 <div class="container">
+<h1>Create New</h1>
    <div class="uplaod-block-main">
       <%= nested_form_for @claim , url: images_path, methods: "post",local: true do |f| %>
       <%= f.text_field :title , placeholder: "Please enter the title" , class: "form-control" %>
