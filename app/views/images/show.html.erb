@@ -3,7 +3,7 @@
       <div class="row">
          <div class="col-sm-6">
             <h2>  Title: <%= @claim.title%>  </h2>
-            <% @claim.images.order("asc").each do |f| %>
+            <% @claim.images.each do |f| %>
             <div class="uplaod-block-main">
                <h4> Image Detail: <%= f.detail %>  </h4>
                <br />
