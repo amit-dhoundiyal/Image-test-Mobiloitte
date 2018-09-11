@@ -1,6 +1,7 @@
 <div class="container" style="padding:20px 0">
+<h1>All Claim Data</h1>
    <h2>
-      <%= link_to "new" , new_image_path, class: "btn btn-primary" %>
+      <%= link_to "New" , new_image_path, class: "btn btn-primary" %>
    </h2>
    <div class="table-responsive">
       <table border=2 class="table table-bordered" >
@@ -9,7 +10,7 @@
          <% @claims.each do |f| %>
          <tr>
             <td><i><%= f.title%></i></td>
-            <td><%= link_to "show" , image_path(f.id), class: "btn btn-primary" %> </td>
+            <td><%= link_to "Show" , image_path(f.id), class: "btn btn-primary" %> </td>
          </tr>
          <% end %>
       </table>

@@ -1,3 +1,4 @@
+<center>
 <div class="container">
    <div class="uplaod-block-main">
       <%= nested_form_for @claim , url: images_path, methods: "post",local: true do |f| %>
@@ -16,4 +17,5 @@
    <%= f.submit "Save",  class: "btn btn-success"%>
    <% end %>
 </div>
+</center>
 

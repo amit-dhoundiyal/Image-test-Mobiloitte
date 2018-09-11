@@ -35,7 +35,6 @@ class ImagesController < ApplicationController
   end
 	
   def image_params
-  	binding.pry
     params.require(:claim_detail).permit(:id,:title, :_destroy, images_attributes: [:id,  :detail, :file , :_destroy] )
   end
 
