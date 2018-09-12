@@ -1,5 +1,5 @@
 <div class="captureImageBox" style="width: 268px;">
-        <label><%= a.text_field :detail , class: "form-control",placeholder: "Detail"%><!-- Detail of damage 2 --></label>
+        <label><%#= a.text_field :detail , class: "form-control",placeholder: "Detail"%><!-- Detail of damage 2 --></label>
        <div class="captureImageBox1">
         <label>
        <%= image_tag ( a.object.present? && a.object.file_url.present? ? a.object.file_url : "/assets/img1.png") , id: "img_tag" , onclick: "set_img_tag_id(this)" %>
