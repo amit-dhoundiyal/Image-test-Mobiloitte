@@ -18,6 +18,7 @@
   
     function readURL1(input) 
     {
+      console.log("readURL");
      img_id = get_img_tag_id();
      //alert("hello"+img_id);
     if (input.files && input.files[0]) 
@@ -30,6 +31,3 @@
      }};
     //alert("grt");
   //});
-
-
-

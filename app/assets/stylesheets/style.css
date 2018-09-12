@@ -1,0 +1,32 @@
+
+body{font-family:arial;margin:0;font-size:14px;}
+.globalBox{border:1px solid #d5d5d7;background:#fff;max-width:600px;width:100%;margin:0 auto;}
+.globalBoxHead{color:#6b6a6a;padding:10px 15px;text-align:center;font-weight:600;font-size:17px;border-bottom:1px solid #d5d5d7;}
+.globalBoxBody{padding:10px 15px;}
+.head3{color:#000;margin:15px 0px;font-weight:600;font-size:17px;}
+.head4{color:#333;margin:15px 0px 10px;font-weight:600;font-size:17px;}
+p{color:#595959;}
+.backColorOverlay{background:#b65e5d;height:20px;width:100%;position:relative;}
+.backColorOverlay span{position:absolute;left:0;top:0;background:#cfa487;height:100%;z-index:9;}
+.mb0{margin-bottom:0!important;}
+.mb10{margin-bottom:10px!important;}
+.mb15{margin-bottom:15px!important;}
+.lineHeight1{line-height:1!important;}
+.bgGray{background:#d4d4d4;}
+.photoCaptureBox{padding:7px 15px;justify-content:space-between;}
+img{max-width:100%;}
+.captureImageBox{width:calc(50% - 15px);margin:7px 0;}
+.captureImageBox label{color:#333;font-weight:600;margin-bottom:7px;font-size:13px;}
+.captureImageBox label sup{color:#ec3c48;top:0;font-size:0.7rem;}
+.captureBox{position:relative;overflow:hidden;}
+.captureBox input[type="file"]{position:absolute;width:100%;height:100%;left:0;top:0;z-index:9;opacity:0;}
+.captureBox img{width:100%;}
+
+.checkboxDesign{margin:0;color:#0a0a0a;}
+.checkboxDesign input{margin:0 3px 0 0;}
+.checkboxDesign a{color:#0e41fb;font-weight:600;}
+.btnSubmit{background:#b65e5d;color:#fff;font-weight:600;border-radius:0;width:150px;max-width:100%;font-size:13px;min-height:40px;}
+
+@media(max-width:360px){
+.captureImageBox label{font-size:0.6rem;}
+}
