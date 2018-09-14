@@ -6,6 +6,9 @@ class ImagesController < ApplicationController
 	
   def new
     @claim =  ClaimDetail.new
+    4.times do
+      image = @claim.images.build
+    end
   end
     
   def create

@@ -1,18 +1,28 @@
-<center>
-<div class="container">
-   <div class="uplaod-block-main" style="background: white;">
-      <div class="row">
-         <div class="col-sm-6">
-            <h2>  Title: <%= @claim.title%>  </h2>
-            <% @claim.images.each do |f| %>
-            <div class="uplaod-block-main">
-               <h4> Image Detail: <%= f.detail %>  </h4>
-               <br />
-               <%= image_tag ( f.file_url )  , width: 100 , height: 100 , id: "img_tag" , onclick: "set_img_tag_id(this)" %>
-            </div>
-            <% end %>
+<div class="globalBox">
+   <div class="globalBoxHead">CLAIM PHOTO CAPTURED</div>
+   <div class="globalBoxBody">
+      <h3 class="text-center head3">NICE PHOTOS</h3>
+      <p class="mb0">A fast and easy way to capture your claim photos and documents!</p>
+   </div>
+   <div class="backColorOverlay">
+      <span style="width:70%;"></span>
+   </div>
+   <div class="globalBoxBody">
+      <p class="mb10 lineHeight1">Claim No: <span><%= @claim.id %></span></p>
+      <p class="mb10 lineHeight1"><%= @claim.title %></p>
+      <h3 class="head4">Photo uploaded/captured</h3>
+   </div>
+   <div class="photoCaptureBox bgGray d-flex flex-wrap mb15">
+      <!-- captureImageBox Start -->
+      <% @claim.images.each do |f| %>
+      <div class="captureImageBox">
+         <!-- <label>Image Detail:<span><%#= f.detail %></span></label> -->
+         <div class="captureBox">
+            <img src="<%= f.file_url %>" alt="images" height= "193.11px"  width= "268px" />
+            <!-- <input type="file"/> -->
          </div>
       </div>
+      <% end %>
+      <!-- captureImageBox End --> 
    </div>
 </div>
-</center>

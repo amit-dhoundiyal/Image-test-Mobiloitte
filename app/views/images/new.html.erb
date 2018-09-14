@@ -1,22 +1,52 @@
-<center>
-<div class="container">
-<h1>Create New Data</h1>
-   <div class="uplaod-block-main">
-      <%= nested_form_for @claim , url: images_path, methods: "post",local: true do |f| %>
-      <%= f.text_field :title , placeholder: "Please enter the title" , class: "form-control",required: true %>
-      <div class="container" style="padding:20px 0">
-         <div class="row">
-            <div class="col-sm-6">
-               <%= f.fields_for :images do |nest_form| %>
-               <%= (render 'image_form', a: nest_form )  %>
-               <% end %>
-               <%= f.link_to_add image_tag("/assets/add_image.png", style: "height: 50px; width: 50px;" ), :images  %>
-            </div>
-         </div>
-      </div>
+<%= nested_form_for @claim , url: images_path, methods: "post",local: true, class: "mb0" do |f| %>
+<div class="globalBox">
+   <div class="globalBoxHead">CLAIM PHOTO CAPTURE</div>
+   <div class="globalBoxBody">
+      <h3 class="text-center head3">REPLACE WITH ANY NICE PHOTO</h3>
+      <p class="mb0">A fast and easy way to capture your claim photos and documents!</p>
    </div>
-   <%= f.submit "Save",  class: "btn btn-success"%>
-   <% end %>
+   <div class="backColorOverlay">
+      <span style="width:70%;"></span>
+   </div>
+   <div class="globalBoxBody">
+      <!-- <p class="mb10 lineHeight1">Claim No.: <span><%= @claim.id %></span></p> -->
+      <p class="mb10 lineHeight1"><%= f.text_field :title , placeholder: "Please enter the claim title" , class: "form-control",required: true %></p>
+      <h3 class="head4">Photo upload/capture</h3>
+   </div>
+   <div class="photoCaptureBox bgGray d-flex flex-wrap mb15">
+      <!-- captureImageBox Start -->
+      <%= f.fields_for :images do |nest_form| %>
+      <%= (render 'image_form', a: nest_form )  %>
+      <% end %>
+      <!-- captureImageBox End --> 
+      <!-- captureImageBox Start -->
+      <%= f.link_to_add image_tag("/assets/attachbg.png", alt: "images" ), :images ,class: "change_img_tag_id", style: "margin-top: 30px" %>
+      <!-- captureImageBox End --> 
+   </div>
+   <!-- Photo Capture Box End -->
+   <div class="globalBoxBody">
+      <label class="checkboxDesign d-flex align-items-center mb10 lineHeight1">
+      <input type="checkbox" checked="checked"  required="true" >
+      I agree to the <a href="javascript:void(0);">Terms & Conditions<a></a>
+      </label>
+   </div>
+   <div class="text-center mb15">
+      <%= f.submit "SEND",  class: "btn btnSubmit"%>
+      <!-- <button type="submit" class="btn btnSubmit">SEND</button> -->
+   </div>
 </div>
-</center>
-
+<% end %>
+<script type="text/javascript">
+   var a = $("img[id^=img_tag]").length
+   
+   $(document).ready(function(){
+     for(var i = 0; i < a; i++) {
+     uid = get_uid();
+       $('#img_tag').attr('id',$('#img_tag').attr('id')+uid);
+     }
+     $('.change_img_tag_id').on('click',function(){
+       uid = get_uid();
+       $('#img_tag').attr('id',$('#img_tag').attr('id')+uid);
+     });
+   });
+</script>

@@ -1,13 +1,13 @@
-<div class="uplaod-block-main">
-   <%= a.text_field :detail , class: "form-control",placeholder: "Detail",required: true%>
-   <div>
-      <label> <%= image_tag ( a.object.present? && a.object.file_url.present? ? a.object.file_url : "/assets/noimage.png")  , width: 100 , height: 100 , id: "img_tag", onclick: "set_img_tag_id(this)" %>
-      <span style= "display: none;"  >
-      <%= a.file_field :file , onchange: "readURL1(this)" %>
-      </span>
-      </label>
-   </div>
-   <%= a.link_to_remove "Remove" , class: "btn btn-danger" %>
+<div class="captureImageBox" style="width: 268px;">
+        <label><%#= a.text_field :detail , class: "form-control",placeholder: "Detail"%><!-- Detail of damage 2 --></label>
+       <div class="captureImageBox1">
+        <label>
+       <%= image_tag ( a.object.present? && a.object.file_url.present? ? a.object.file_url : "/assets/img1.png") , id: "img_tag" , onclick: "set_img_tag_id(this)" , height: "193.11px" , width: "268px" %>
+       <span style= "display: none;"  >
+        <%= a.file_field :file , onchange: "readURL1(this)" %></span></label>
+       </div>
+
+ <%= a.link_to_remove "Remove" , class: "btn btn-danger" %>
 </div>
 
 <script type="text/javascript">

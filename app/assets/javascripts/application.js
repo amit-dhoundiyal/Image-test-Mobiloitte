@@ -11,10 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-3.3.1.min.js
+//= require jquery.nicescroll.min.js
 //= require images
 //= require jquery_nested_form
-//= require bootstrap-sprockets
-//= require bootstrap
+//
+//= require bootstrap.min.js
+//= require cable.js
+//= require common.js
+//= require datepicker.js
+//
 //= require rails-ujs
 //= require alertify
 //= require_tree .
